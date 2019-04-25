@@ -10,7 +10,7 @@ export default function CartItem({item, value}) {
         <img src={img_thumb} className='mx-lg-auto' alt='product image'/>
       </div>
 
-      <div className='cart-info-container col col-sm-4 col-lg-10'>
+      <div className='cart-info-container text-white col col-sm-4 col-lg-10'>
         <span className='col-lg-2 mx-lg-auto'><strong>{title}</strong></span>
 
         <span className='col-lg-2 mx-lg-auto'>${price}</span>

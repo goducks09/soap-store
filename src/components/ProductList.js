@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import Product from "./Product";
 import { storeProducts } from '../data';
 import {ProductConsumer} from '../context';
+import {Link} from 'react-router-dom';
 
 export default class ProductList extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className='product-list'>
         <h2 className='page-title display-3 font-weight-bold'>Products</h2>
 
         <ProductConsumer>
@@ -17,7 +18,13 @@ export default class ProductList extends Component {
             });
           }}
         </ProductConsumer>
-      </React.Fragment>
+
+        <div className='fixed-bottom text-right p-3'>
+          <Link to='/about'>
+            Help
+          </Link>
+        </div>
+      </div>
     );
   }
 }

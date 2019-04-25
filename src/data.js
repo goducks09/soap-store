@@ -68,7 +68,7 @@ export const storeProducts = [
     id: 6,
     title: "Rainbows and Unicorns",
     img: "img/product-6.jpg",
-    img_thumb: "img/product-6-thumb.png",
+    img_thumb: "img/product-6-thumb.jpg",
     price: 17,
     company: "apple",
     info:

@@ -14,12 +14,12 @@ export default class Cart extends Component {
             return <span className='page-title align-self-center'>Your Cart is Empty</span>;
           } else {
             return (
-              <React.Fragment>
+              <div className='cart-wrapper'>
                 <h3 className='display-4 page-title'>Shopping Cart</h3>
                 <CartColumns />
                 <CartList value={value} />
                 <CartTotal value={value} />
-              </React.Fragment>
+              </div>
             );
           };
         }}
