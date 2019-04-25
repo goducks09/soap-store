@@ -7,7 +7,7 @@ export default function CartItem({item, value}) {
   return (
     <div className='row justify-content-center text-center flex-nowrap'>
       <div className='col col-sm-6 col-md-3 col-lg-2 text-center'>
-        <img src={img_thumb} className='mx-lg-auto' alt='product image'/>
+        <img src={img_thumb} className='mx-lg-auto' alt='bar of soap'/>
       </div>
 
       <div className='cart-info-container text-white col col-sm-4 col-lg-10'>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Product from "./Product";
-import { storeProducts } from '../data';
 import {ProductConsumer} from '../context';
 import {Link} from 'react-router-dom';
 

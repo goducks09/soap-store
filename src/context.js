@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {storeProducts, detailProduct} from './data';
+import {storeProducts} from './data';
 
+//Format currency amounts
 let formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD'
@@ -11,10 +12,10 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
-    productDetail: detailProduct,
+    productDetail: {},
     cart: [],
     modalOpen: false,
-    modalProduct: detailProduct,
+    modalProduct: {},
     cartSubtotal: 0,
     cartTax: 0,
     cartTotal: 0

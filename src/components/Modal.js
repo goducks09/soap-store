@@ -26,7 +26,7 @@ export default class Modal extends Component {
                     <div className='row'>
                         <div id='modal' className='col-8 d-flex flex-column justify-content-between text-center mx-auto p-5'>
                           <h4 className='mb-3'>{title}</h4>
-                          <img src={img} className='img-fluid' alt='product image'/>
+                          <img src={img} className='img-fluid' alt='bar of soap'/>
                           <h5 className='text-muted my-3'>Price: ${price}</h5>
 
 
