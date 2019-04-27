@@ -14,16 +14,14 @@ export default function CartTotal({value}) {
           </div>
 
           <div className='col-12 my-2 ml-md-auto text-right text-md-center text-lg-right'>
-            <button className='m-2 px-5' type='button'>
-              <Link to='/products'>
+          <Link to='/products'>
+            <span className='button m-2 px-5' role='button'>
                 Continue Shopping
-              </Link>
-            </button>
+            </span>
+            </Link>
 
             <button className='btn-outline-danger text-uppercase m-2 px-5' type='button' onClick={() => clearCart()}>
-              <Link to='/'>
-                Clear Cart
-              </Link>
+              Clear Cart
             </button>
           </div>
         </div>

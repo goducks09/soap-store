@@ -5,6 +5,7 @@ a {
 }
 
 a:hover {
+  color: orangered;
   text-decoration: none;
 }
 
@@ -12,30 +13,38 @@ body {
   background-color: #515151;
 }
 
-button {
+
+h1 {
+  margin-top: 5rem;
+}
+
+button,
+.button {
   background-color: transparent;
   border: 1px solid #18dcdc;
   border-radius: 10px;
   color: #18dcdc;
 }
 
-h1 {
-  margin-top: 5rem;
-}
-
 button:hover,
-.btn:hover {
+.btn:hover,
+.button:hover {
   background-color: #18dcdc;
 }
 
-a:hover,
 button:hover,
-.btn:hover {
+.btn:hover,
+.button:hover {
   color: white;
 }
 
 .btn {
   color: orangered;
+}
+
+.button {
+  display: inline-block;
+  padding: 1px 6px;
 }
 
 .cursor-pointer {
@@ -89,10 +98,35 @@ button:hover,
   opacity: 0 !important;
 }
 
+.slide-appear,
+.slide-enter {
+  opacity: 0 !important;
+}
+
+.slide-appear-active,
+.slide-enter-active {
+  transition: opacity 300ms linear !important;
+  opacity: 1 !important;
+}
+
+.slide-exit {
+  transition: opacity 200ms linear !important;
+  opacity: 1 !important;
+}
+
+.slide-exit-active {
+  opacity: 0 !important;
+}
+
 /* Navbar */
 
-.navbar{
-  background-color: rgba(255,255,255,0.9);
+.navbar {
+  background-color: rgba(255,255,255,0.95);
+}
+
+.navbar-title {
+  font-family: 'Lobster Two', cursive;
+  font-size: 3rem;
 }
 
 /* Landing Page */
@@ -262,6 +296,7 @@ button:hover,
 }
 
 /* Media Queries */
+
 @media only screen and (min-width: 992px) {
   .cart-container {
     flex-basis: 100%;

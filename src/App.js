@@ -19,12 +19,13 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <Nav />
+        {currentKey !== '/' ? <Nav /> : null}
+
         <TransitionGroup component={null}>
           <CSSTransition appear key={currentKey} classNames='fade' timeout={{enter: 300, exit: 200}}>
 
               <Switch location={location}>
-                <Route path exact='/' component={LandingPage} />
+                <Route path='/' exact component={LandingPage} />
                 <Route path='/products' component={ProductList} />
                 <Route path='/details' component={Details} />
                 <Route path='/cart' component={Cart} />

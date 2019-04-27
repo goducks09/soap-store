@@ -31,21 +31,22 @@ export default class Details extends Component {
 
                     {/* cart buttons */}
                     <div className='d-flex justify-content-around justify-content-xl-center mt-5'>
-                      <button className='mx-xl-3'>
-                        <Link to='/products'>
-                          Continue Shopping
-                        </Link>
-                      </button>
+                      <Link to='/products'>
+                        <span className='button mx-xl-3' role='button'>
+                            Continue Shopping
+                        </span>
+                      </Link>
 
-                      <button disabled={inCart} onClick={ () => {
-                        value.addToCart(id);
-                        console.log(value);
-                      }} className='mx-xl-3'>
-                        {inCart ? (<Link to='/cart'>View In Cart</Link>) : ("Add to Cart")}
-                      </button>
+                      {/* conditionally render button based on inCart status*/}
+                      {inCart ?
+                        (<Link to='/cart' className='button' role='button'>View In Cart</Link>) : (<button type='button'
+                          onClick={ () => {value.addToCart(id);}}>
+                            Add to Cart
+                        </button>)
+                      }
+
                     </div>
                   </div>
-
                 </div>
               </div>
             )

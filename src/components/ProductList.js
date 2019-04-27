@@ -8,7 +8,7 @@ export default class ProductList extends Component {
   render() {
     return (
       <div className='product-list'>
-        <h2 className='page-title display-3 font-weight-bold'>Products</h2>
+        <h2 className='page-title display-3'>Products</h2>
 
         <ProductConsumer>
           {value => {

@@ -10,6 +10,7 @@ export default class Product extends Component {
       <ProductConsumer>
       {(value) => (
         <div className='card-container d-flex flex-column flex-nowrap align-items-center mx-2 mb-5 cursor-pointer' onClick={() => value.openModal(id)}>
+
           <React.Fragment>
             <div className='card m-1 text-center justify-content-center' style={{background: `center /cover no-repeat url(${img})`}}>
               <div className='info-container'>
@@ -19,8 +20,10 @@ export default class Product extends Component {
                 </svg>
               </div>
             </div>
+
             <h3>{title}</h3>
           </React.Fragment>
+          
         </div>
       )}
       </ProductConsumer>
