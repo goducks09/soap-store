@@ -22,7 +22,7 @@ class App extends Component {
         {currentKey !== '/' ? <Nav /> : null}
 
         <TransitionGroup component={null}>
-          <CSSTransition appear key={currentKey} classNames='fade' timeout={{enter: 300, exit: 200}}>
+          <CSSTransition appear={true} mountOnEnter={true} unmountOnExit={true} key={currentKey} classNames={currentKey === '/' ? 'fadein' : 'slide'} timeout={currentKey === '/' ? {enter: 500, exit:1000} : {enter: 1500, exit: 1000}}>
 
               <Switch location={location}>
                 <Route path='/' exact component={LandingPage} />

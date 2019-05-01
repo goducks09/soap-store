@@ -65,6 +65,7 @@ button:hover,
   text-decoration: underline;
 }
 
+.about,
 .cart-wrapper,
 .product-list,
 #root {
@@ -74,48 +75,53 @@ button:hover,
   flex-wrap: wrap;
   justify-content: space-around;
   min-height: 100vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 /* Transitions */
 
-.fade-appear,
-.fade-enter {
+.fadein-appear,
+.fadein-enter {
   opacity: 0 !important;
 }
 
-.fade-appear-active,
-.fade-enter-active {
-  transition: opacity 300ms linear !important;
+.fadein-appear-active,
+.fadein-enter-active {
+  transition: opacity 500ms linear !important;
   opacity: 1 !important;
 }
 
-.fade-exit {
-  transition: opacity 200ms linear !important;
-  opacity: 1 !important;
+.fadein-exit {
+  transform: translateY(0%) !important;
 }
 
-.fade-exit-active {
-  opacity: 0 !important;
+.fadein-exit-active {
+  transform: translateY(100%) !important;
+  transition: transform 1000ms linear !important;
 }
 
-.slide-appear,
+
 .slide-enter {
-  opacity: 0 !important;
+  transform: translateY(-100%) !important;
 }
 
-.slide-appear-active,
-.slide-enter-active {
-  transition: opacity 300ms linear !important;
-  opacity: 1 !important;
+
+.slide-enter.slide-enter-active {
+  transform: translateY(0%) !important;
+  transition: transform 1300ms linear 200ms !important;
 }
 
 .slide-exit {
-  transition: opacity 200ms linear !important;
-  opacity: 1 !important;
+  transform: translateY(0%) !important;
 }
 
-.slide-exit-active {
-  opacity: 0 !important;
+.slide-exit.slide-exit-active {
+  transform: translateY(100%) !important;
+  transition: transform 1000ms linear !important;
 }
 
 /* Navbar */

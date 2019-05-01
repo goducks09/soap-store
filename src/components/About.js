@@ -14,7 +14,7 @@ export default class About extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className='about'>
         <h2 className='page-title display-3 font-weight-bold'>About Us</h2>
 
         <p className='text-white text-center mx-5'>
@@ -28,7 +28,7 @@ export default class About extends Component {
                 <button className='help-menu' type='button' onClick={(e) => {e.target.classList.toggle('show'); this.animateMenu()}}>
                   Select a topic
                 </button>
-                <CSSTransition in={this.state.animateMenu} classNames='fade' timeout={{enter: 300, exit: 200}}>
+                <CSSTransition in={this.state.animateMenu} classNames='fadein' timeout={{enter: 300, exit: 1000}}>
                   <div className='dropdown-menu' onClick={(e) => {e.stopPropagation()}}>
                     <button className='dropdown-item' type='button'>Order Status</button>
                     <button className='dropdown-item' type='button'>Payment Questions</button>
@@ -39,7 +39,7 @@ export default class About extends Component {
           </div>
         </TransitionGroup>
 
-      </React.Fragment>
+      </div>
     );
   }
 }
