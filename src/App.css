@@ -309,13 +309,13 @@ button:hover,
   }
 
   .fadein-exit-active {
-    transform: translateY(100%) !important;
+    transform: translateY(-100%) !important;
     transition: transform 1000ms linear !important;
   }
 
 
   .slide-enter {
-    transform: translateY(-100%) !important;
+    transform: translateY(100%) !important;
   }
 
 
@@ -329,7 +329,7 @@ button:hover,
   }
 
   .slide-exit.slide-exit-active {
-    transform: translateY(100%) !important;
+    transform: translateY(-100%) !important;
     transition: transform 1000ms linear !important;
   }
 }
