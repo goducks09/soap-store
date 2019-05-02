@@ -11,10 +11,14 @@ export default class Cart extends Component {
         {value => {
           const {cart} = value;
           if(cart.length === 0) {
-            return <span className='page-title align-self-center'>Your Cart is Empty</span>;
+            return (
+              <div className='page-wrapper'>
+                <span className='page-title align-self-center'>Your Cart is Empty</span>
+              </div>
+            );
           } else {
             return (
-              <div className='cart-wrapper'>
+              <div className='page-wrapper'>
                 <h3 className='display-4 page-title'>Shopping Cart</h3>
                 <CartColumns />
                 <CartList value={value} />

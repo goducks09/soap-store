@@ -7,7 +7,7 @@ export default class ProductList extends Component {
 
   render() {
     return (
-      <div className='product-list'>
+      <div className='page-wrapper'>
         <h2 className='page-title display-3'>Products</h2>
 
         <ProductConsumer>

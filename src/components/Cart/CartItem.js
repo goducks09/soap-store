@@ -15,8 +15,8 @@ export default function CartItem({item, value}) {
 
         <span className='col-lg-2 mx-lg-auto'>${price}</span>
 
-        <div className='d-flex justify-content-center col-lg-2 mx-lg-auto'>
-          <div>
+        <div className='col-lg-2 mx-lg-auto'>
+          <div className='d-flex justify-content-center'>
             <button className='btn mx-1' onClick={() => decrement(id)}>-</button>
             <span>{count}</span>
             <button className='btn mx-1' onClick={() => increment(id)}>+</button>

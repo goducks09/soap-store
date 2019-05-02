@@ -14,7 +14,7 @@ export default class About extends Component {
 
   render() {
     return (
-      <div className='about'>
+      <div className='page-wrapper'>
         <h2 className='page-title display-3 font-weight-bold'>About Us</h2>
 
         <p className='text-white text-center mx-5'>
@@ -22,7 +22,7 @@ export default class About extends Component {
         </p>
 
         <TransitionGroup component={null}>
-          <div className='help d-flex align-items-center justify-content-center'>
+          <div className='help d-flex align-items-center justify-content-center flex-wrap text-center'>
             <h3>Need Help?</h3>
               <div className='dropdown position-relative ml-2 ml-sm-4'>
                 <button className='help-menu' type='button' onClick={(e) => {e.target.classList.toggle('show'); this.animateMenu()}}>
